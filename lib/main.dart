@@ -35,7 +35,7 @@ class MyHomePage extends StatelessWidget {
     final l10n = L10n.of(context);
     return Scaffold(
       appBar: AppBar(
-        title: Text('Intl Demo'),
+        title: const Text('Intl Demo'),
       ),
       body: Center(
         child: Column(
