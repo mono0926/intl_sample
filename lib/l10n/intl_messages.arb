@@ -1,0 +1,38 @@
+{
+  "@@locale": "messages",
+  "@@last_modified": "2019-05-01T17:01:15.716298",
+  "hello": "こんにちは",
+  "@hello": {
+    "description": "挨拶",
+    "type": "text",
+    "placeholders": {}
+  },
+  "followers": "フォロワー: {count}",
+  "@followers": {
+    "type": "text",
+    "placeholders": {
+      "count": {}
+    }
+  },
+  "dogsCount": "{howMany,plural, =0{no dog😢}=1{a dog}other{{howMany} dogs}}",
+  "@dogsCount": {
+    "type": "text",
+    "placeholders": {
+      "howMany": {}
+    }
+  },
+  "hungry": "{gender,select, female{私はお腹が空いたわ}male{僕はお腹が空きました}other{はらぺこりん}}",
+  "@hungry": {
+    "type": "text",
+    "placeholders": {
+      "gender": {}
+    }
+  },
+  "xxx": "{choice,select, }",
+  "@xxx": {
+    "type": "text",
+    "placeholders": {
+      "choice": {}
+    }
+  }
+}

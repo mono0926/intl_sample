@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
+import 'package:intl_sample/l10n/l10n.dart';
+
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 void main() => runApp(MyApp());
 
@@ -6,54 +10,50 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      title: 'Intl Demo',
+      home: MyHomePage(),
+      localizationsDelegates: [
+        const L10nDelegate(),
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ],
+      supportedLocales: const [
+        Locale('ja'),
+        Locale('en'),
+      ],
+      // localeListResolutionCallback: (_, __) => Locale('en'),
+      // localeResolutionCallback: (_, __) => Locale('en'),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-
-  final String title;
-
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
+class MyHomePage extends StatelessWidget {
+  MyHomePage({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final l10n = L10n.of(context);
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Text('Intl Demo'),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.display1,
-            ),
+            Text(l10n.hello),
+            Text(DateFormat().format(DateTime.now())),
+            Text(l10n.followers(l10n.formatInt(1400))),
+            Text(l10n.dogsCount(0)),
+            Text(l10n.dogsCount(1)),
+            Text(l10n.dogsCount(5)),
+            Text(l10n.hungry('male')),
+            Text(l10n.hungry('female')),
+            Text(l10n.hungry('other')),
+            Text(l10n.memberStatus(Membership.normal)),
+            Text(l10n.memberStatus(Membership.premius)),
           ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
       ),
     );
   }

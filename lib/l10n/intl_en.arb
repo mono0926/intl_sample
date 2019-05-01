@@ -1,0 +1,10 @@
+{
+  "@@locale": "en",
+  "@@last_modified": "2019-05-01T15:19:03.319575",
+  "hello": "Hello🌍",
+  "@hello": {
+    "description": "挨拶",
+    "type": "text",
+    "placeholders": {}
+  }
+}
