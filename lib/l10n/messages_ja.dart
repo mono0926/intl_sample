@@ -24,7 +24,7 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m2(gender) => "${Intl.gender(gender, female: '私はお腹が空いたわ', male: '僕はお腹が空きました', other: 'はらぺこりん')}";
 
-  static m3(choice) => "{choice,select, }";
+  static m3(membership) => "${Intl.select(membership, {'normal': '通常会員です', 'premius': 'プレミアム会員です✨✨', })}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function> {
@@ -32,6 +32,6 @@ class MessageLookup extends MessageLookupByLibrary {
     "followers" : m1,
     "hello" : MessageLookupByLibrary.simpleMessage("こんにちは"),
     "hungry" : m2,
-    "xxx" : m3
+    "memberStatus" : m3
   };
 }
