@@ -3,9 +3,8 @@ import 'dart:ui';
 import 'package:flutter/widgets.dart';
 import 'package:intl/intl.dart';
 
+import 'l10n_delegate.dart';
 import 'messages_all.dart';
-
-export 'l10n_delegate.dart';
 
 /// アプリでの文言はこれ経由で取得する
 class L10n {
@@ -30,6 +29,8 @@ class L10n {
   static L10n of(BuildContext context) {
     return Localizations.of<L10n>(context, L10n);
   }
+
+  static const LocalizationsDelegate<L10n> delegate = L10nDelegate();
 
   // 以下、Intl.messageを用いて必要な文言を返すgetter・メソッドを定義
 
