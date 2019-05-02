@@ -18,9 +18,9 @@ typedef MessageIfAbsent(String message_str, List args);
 class MessageLookup extends MessageLookupByLibrary {
   get localeName => 'messages';
 
-  static m0(howMany) => "${Intl.plural(howMany, zero: 'no dog😢', one: 'a dog', other: '${howMany} dogs')}";
+  static m0(count) => "フォロワー: ${count}";
 
-  static m1(count) => "フォロワー: ${count}";
+  static m1(howMany) => "${Intl.plural(howMany, zero: 'no dog😢', one: 'a dog', other: '${howMany} dogs')}";
 
   static m2(gender) => "${Intl.gender(gender, female: '私はお腹が空いたわ', male: '僕はお腹が空きました', other: 'はらぺこりん')}";
 
@@ -28,8 +28,8 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function> {
-    "dogsCount" : m0,
-    "followers" : m1,
+    "_followers" : m0,
+    "dogsCount" : m1,
     "hello" : MessageLookupByLibrary.simpleMessage("こんにちは"),
     "hungry" : m2,
     "memberStatus" : m3

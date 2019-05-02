@@ -43,7 +43,7 @@ class MyHomePage extends StatelessWidget {
           children: <Widget>[
             Text(l10n.hello),
             Text(DateFormat().format(DateTime.now())),
-            Text(l10n.followers(l10n.formatInt(1400))),
+            Text(l10n.followers(1400)),
             Text(l10n.dogsCount(0)),
             Text(l10n.dogsCount(1)),
             Text(l10n.dogsCount(5)),

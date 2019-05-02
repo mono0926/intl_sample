@@ -31,9 +31,6 @@ class L10n {
     return Localizations.of<L10n>(context, L10n);
   }
 
-  final _numberFormat = NumberFormat.compact(locale: 'en');
-  String formatInt(int num) => _numberFormat.format(num);
-
   // 以下、Intl.messageを用いて必要な文言を返すgetter・メソッドを定義
 
   String get hello => Intl.message(
@@ -42,9 +39,13 @@ class L10n {
         desc: '挨拶', // オプション
       );
 
-  String followers(String count) => Intl.message(
+  // NumberFormatは実際には使い回したりするがサンプルなので毎回生成
+  String followers(int count) =>
+      _followers(NumberFormat.compact(locale: 'en').format(count));
+
+  String _followers(String count) => Intl.message(
         'フォロワー: $count',
-        name: 'followers',
+        name: '_followers',
         args: [count],
       );
 

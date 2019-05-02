@@ -1,14 +1,14 @@
 {
   "@@locale": "ja",
-  "@@last_modified": "2019-05-01T18:38:57.932504",
+  "@@last_modified": "2019-05-02T09:55:00.234467",
   "hello": "こんにちは",
   "@hello": {
     "description": "挨拶",
     "type": "text",
     "placeholders": {}
   },
-  "followers": "フォロワー: {count}",
-  "@followers": {
+  "_followers": "フォロワー: {count}",
+  "@_followers": {
     "type": "text",
     "placeholders": {
       "count": {}
