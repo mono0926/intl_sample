@@ -1,6 +1,6 @@
 {
   "@@locale": "messages",
-  "@@last_modified": "2019-05-02T09:55:00.234467",
+  "@@last_modified": "2019-08-15T10:29:25.103103",
   "hello": "こんにちは",
   "@hello": {
     "description": "挨拶",
@@ -28,7 +28,7 @@
       "gender": {}
     }
   },
-  "memberStatus": "{membership,select, normal{通常会員です}premius{プレミアム会員です✨✨}}",
+  "memberStatus": "{membership,select, normal{通常会員です}premium{プレミアム会員です✨✨}}",
   "@memberStatus": {
     "type": "text",
     "placeholders": {

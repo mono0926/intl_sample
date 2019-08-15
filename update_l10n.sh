@@ -4,7 +4,7 @@
 flutter packages pub run intl_translation:extract_to_arb \
     --locale=messages \
     --output-dir=lib/l10n \
-    lib/l10n/l10n.dart
+    lib/l10n/messages.dart
 
 # 生成された雛形のintl_messages.arbをコピーしてintl_ja.arbを作成
 # 警告抑制のため、@@localeだけ指定
@@ -20,5 +20,5 @@ cat lib/l10n/intl_messages.arb | \
 flutter packages pub run intl_translation:generate_from_arb \
     --output-dir=lib/l10n \
     --no-use-deferred-loading \
-    lib/l10n/l10n.dart \
+    lib/l10n/messages.dart \
     lib/l10n/intl_*.arb

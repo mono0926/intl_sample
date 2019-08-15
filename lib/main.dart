@@ -50,7 +50,7 @@ class MyHomePage extends StatelessWidget {
             Text(l10n.hungry('female')),
             Text(l10n.hungry('other')),
             Text(l10n.memberStatus(Membership.normal)),
-            Text(l10n.memberStatus(Membership.premius)),
+            Text(l10n.memberStatus(Membership.premium)),
           ],
         ),
       ),
