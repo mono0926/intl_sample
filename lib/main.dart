@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
         L10n.delegate,
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
       ],
       supportedLocales: const [
         Locale('ja'),
