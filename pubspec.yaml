@@ -9,6 +9,7 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   cupertino_icons: ^0.1.2
+  intl: any
 dev_dependencies:
   flutter_test:
     sdk: flutter
