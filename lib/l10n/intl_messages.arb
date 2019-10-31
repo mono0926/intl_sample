@@ -1,6 +1,6 @@
 {
   "@@locale": "messages",
-  "@@last_modified": "2019-08-15T10:29:25.103103",
+  "@@last_modified": "2019-10-31T13:51:46.228983",
   "hello": "こんにちは",
   "@hello": {
     "description": "挨拶",
