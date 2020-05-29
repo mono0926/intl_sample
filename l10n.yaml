@@ -1,0 +1,7 @@
+arb-dir: lib/l10n
+# ベース言語(文言が他言語にて未翻訳場合はこの言語にフォールバック)
+template-arb-file: intl_ja.arb
+# ファイル名を短くした(デフォルトはapp_localizations.dart)
+output-localization-file: l10n.dart
+# クラス名を短くした(デフォルトはAppLocalizations)
+output-class: L10n

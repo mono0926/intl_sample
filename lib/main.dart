@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:intl/intl.dart';
 import 'package:intl_sample/l10n/l10n.dart';
 
 void main() => runApp(MyApp());
@@ -8,19 +6,11 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       title: 'Intl Demo',
-      home: const MyHomePage(),
-      localizationsDelegates: [
-        L10n.delegate,
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-      ],
-      supportedLocales: const [
-        Locale('ja'),
-        Locale('en'),
-      ],
+      home: MyHomePage(),
+      localizationsDelegates: L10n.localizationsDelegates,
+      supportedLocales: L10n.supportedLocales,
       // localeListResolutionCallback: (_, __) => Locale('en'),
       // localeResolutionCallback: (_, __) => Locale('en'),
     );
@@ -42,8 +32,8 @@ class MyHomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(l10n.hello),
-            Text(DateFormat().format(DateTime.now())),
-            Text(l10n.followers(1400)),
+            Text(l10n.helloWorldOn(DateTime.now())),
+            Text(l10n.followers(140000)),
             Text(l10n.dogsCount(0)),
             Text(l10n.dogsCount(1)),
             Text(l10n.dogsCount(5)),
@@ -58,3 +48,5 @@ class MyHomePage extends StatelessWidget {
     );
   }
 }
+
+enum Membership { normal, premium }

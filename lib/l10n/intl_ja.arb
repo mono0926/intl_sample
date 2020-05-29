@@ -7,11 +7,24 @@
     "type": "text",
     "placeholders": {}
   },
-  "_followers": "フォロワー: {count}",
-  "@_followers": {
+  "helloWorldOn": "Hello World on {date}",
+  "@helloWorldOn": {
+    "description": "A message with a date parameter",
+    "placeholders": {
+      "date": {
+        "type": "DateTime",
+        "format": "yMd"
+      }
+    }
+  },
+  "followers": "フォロワー: {count}",
+  "@followers": {
     "type": "text",
     "placeholders": {
-      "count": {}
+      "count": {
+        "type": "int",
+        "format": "compact"
+      }
     }
   },
   "dogsCount": "{howMany,plural, =0{no dog😢}=1{a dog}other{{howMany} dogs}}",
