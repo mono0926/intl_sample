@@ -2,5 +2,8 @@
 include: package:pedantic_mono/analysis_options.yaml
 analyzer:
   exclude:
-    - lib/l10n/messages_*.dart
-    - ios/**
+    - lib/l10n/l10n*.dart
+linter:
+  rules:
+    # import 'package:flutter_gen/gen_l10n/l10n.dart'; に警告が残ってしまうことがあるので
+    depend_on_referenced_packages: false

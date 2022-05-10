@@ -2,18 +2,18 @@ name: intl_sample
 description: A new Flutter project.
 version: 1.0.0+1
 environment:
-  sdk: '>=2.1.0 <3.0.0'
+  sdk: '>=2.16.0 <3.0.0'
 dependencies:
+  cupertino_icons:
   flutter:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
-  cupertino_icons:
   intl: any
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  intl_translation: any
   pedantic_mono: any
 flutter:
   uses-material-design: true
+  generate: true
