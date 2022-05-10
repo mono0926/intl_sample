@@ -5,3 +5,5 @@ template-arb-file: intl_ja.arb
 output-localization-file: l10n.dart
 # クラス名を短くした(デフォルトはAppLocalizations)
 output-class: L10n
+# `L10n.of(context)`結果がnon-nullになる
+nullable-getter: false
