@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/l10n.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const App());
 
-class MyApp extends StatelessWidget {
+class App extends StatelessWidget {
+  const App({Key key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
       title: 'Intl Demo',
-      home: MyHomePage(),
+      home: HomePage(),
       localizationsDelegates: L10n.localizationsDelegates,
       supportedLocales: L10n.supportedLocales,
       // localeListResolutionCallback: (_, __) => Locale('en'),
@@ -17,8 +19,8 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({Key key}) : super(key: key);
+class HomePage extends StatelessWidget {
+  const HomePage({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
