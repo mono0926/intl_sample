@@ -1,5 +1,5 @@
 # ベース言語(文言が他言語にて未翻訳場合はこの言語にフォールバック)
-template-arb-file: intl_ja.arb
+template-arb-file: app_ja.arb
 # クラス名を短くした(デフォルトはAppLocalizations)
 output-class: L10n
 # `L10n.of(context)`結果がnon-nullになる
