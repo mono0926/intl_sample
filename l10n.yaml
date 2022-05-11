@@ -1,4 +1,4 @@
-# ベース言語(文言が他言語にて未翻訳場合はこの言語にフォールバック)
+# ベース言語(文言が他言語にて未翻訳の場合はこの言語にフォールバック)
 template-arb-file: app_ja.arb
 # クラス名を短くした(デフォルトはAppLocalizations)
 output-class: L10n
