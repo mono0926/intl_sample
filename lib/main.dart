@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:intl/intl.dart';
 
 void main() => runApp(const App());
 
@@ -23,6 +24,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final l10n = L10n.of(context);
+    print('current locale: ${Intl.getCurrentLocale()}');
     return Scaffold(
       appBar: AppBar(
         title: const Text('Intl Demo'),
