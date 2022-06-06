@@ -9,11 +9,16 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       title: 'Intl Demo',
-      home: HomePage(),
+      home: const HomePage(),
       localizationsDelegates: L10n.localizationsDelegates,
       supportedLocales: L10n.supportedLocales,
+      localeListResolutionCallback: (locales, supportedLocales) {
+        final locale = basicLocaleListResolution(locales, supportedLocales);
+        Intl.defaultLocale = locale.toString();
+        return locale;
+      },
     );
   }
 }
