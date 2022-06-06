@@ -13,8 +13,6 @@ class App extends StatelessWidget {
       home: HomePage(),
       localizationsDelegates: L10n.localizationsDelegates,
       supportedLocales: L10n.supportedLocales,
-      // localeListResolutionCallback: (_, __) => Locale('en'),
-      // localeResolutionCallback: (_, __) => Locale('en'),
     );
   }
 }
