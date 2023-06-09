@@ -41,7 +41,7 @@
       "gender": {}
     }
   },
-  "memberStatus": "{membership,select, normal{通常会員です}premium{プレミアム会員です✨✨}}",
+  "memberStatus": "{membership,select, normal{通常会員です}premium{プレミアム会員です✨✨}other{}}",
   "@memberStatus": {
     "type": "text",
     "placeholders": {
