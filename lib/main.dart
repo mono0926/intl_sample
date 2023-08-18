@@ -5,7 +5,7 @@ import 'package:intl/intl.dart';
 void main() => runApp(const App());
 
 class App extends StatelessWidget {
-  const App({Key? key}) : super(key: key);
+  const App({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class App extends StatelessWidget {
 }
 
 class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+  const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -47,8 +47,8 @@ class HomePage extends StatelessWidget {
             Text(l10n.hungry('male')),
             Text(l10n.hungry('female')),
             Text(l10n.hungry('other')),
-            Text(l10n.memberStatus(Membership.normal)),
-            Text(l10n.memberStatus(Membership.premium)),
+            Text(l10n.memberStatus(Membership.normal.name)),
+            Text(l10n.memberStatus(Membership.premium.name)),
           ],
         ),
       ),
